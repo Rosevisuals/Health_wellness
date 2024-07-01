@@ -1,0 +1,39 @@
+.NutritionAdviceWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #1a73e8;
+}
+
+.section p,
+.section ul {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #666;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}

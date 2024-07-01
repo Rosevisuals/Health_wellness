@@ -1,0 +1,81 @@
+/* SignIn.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.SignInWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 500px;
+  position: relative;
+  top: 130px;
+  /*background: linear-gradient(to right, #1a237e, #304ffe);*/
+  color: #000000;
+}
+
+.SignInWrapper h1 {
+  margin: 20px 0;
+  font-size: 2.5em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.SignInWrapper .content {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.SignInWrapper .links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+.SignInWrapper .links a {
+  color: #fbc02d;
+  text-decoration: none;
+}
+
+.SignInWrapper .links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .SignInWrapper .content {
+    padding: 0 10px;
+  }
+
+  .SignInWrapper h1 {
+    font-size: 2em;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

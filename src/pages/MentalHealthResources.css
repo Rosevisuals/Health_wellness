@@ -1,0 +1,42 @@
+.typo {
+  width: 100%;
+  max-width: 1200px; /* Adjusted max-width for better responsiveness */
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+  }
+  
+  .icon-wrapper {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #1a73e8;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: #1a237e;
+  }
+  
+  p {
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  ul {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  

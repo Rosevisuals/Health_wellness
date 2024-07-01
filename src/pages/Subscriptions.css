@@ -1,0 +1,153 @@
+/* Subscriptions.css */
+
+.subscriptions-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+.subscriptions-wrapper h1 {
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #1a237e;
+}
+
+.subscription-plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.plan {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plan-title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #304ffe;
+}
+
+.plan-price {
+  font-size: 2em;
+  margin: 20px 0;
+  color: #1a237e;
+}
+
+.plan-description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.plan-benefits {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.plan-benefits li {
+  margin-bottom: 10px;
+}
+
+.subscribe-button {
+  background-color: #fbc02d;
+  color: #1a237e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #f9a825;
+  transform: scale(1.05);
+}
+
+.next-steps {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.next-steps h2 {
+  color: #1a237e;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.next-steps p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.next-steps ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.next-steps ul li {
+  margin-bottom: 10px;
+}
+
+/* Modal Styles */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+}
+
+.pay-button, .close-button {
+  background-color: #fbc02d;
+  color: #1a237e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.pay-button:hover, .close-button:hover {
+  background-color: #f9a825;
+  transform: scale(1.05);
+}

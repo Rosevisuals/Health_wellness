@@ -1,0 +1,149 @@
+.FitnessPlansWrapper {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.wellness-item, .fitness-item, .nutrition-item, .interactive-item, .expert-item {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: disc inside;
+  margin-bottom: 20px;
+  color: #7f8c8d;
+  font-size: 1.1em;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+form {
+  margin-bottom: 20px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table, th, td {
+  border: 1px solid #ecf0f1;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  font-size: 1em;
+}
+
+th {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+td {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .FitnessPlansWrapper {
+    padding: 20px 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.ply{
+  width: 800px;
+  
+  position: relative;
+  left: 300px;
+}
