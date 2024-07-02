@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaPray, FaBrain, FaSmile, FaHeart } from 'react-icons/fa';
 import './MentalHealthResources.css';
@@ -25,9 +24,6 @@ const Illustration = styled.img`
 `;
 
 function MentalHealthResources() {
-  const location = useLocation();
-  const { accessLevel } = location.state || { accessLevel: 'basic' };
-
   return (
     <MentalHealthResourcesWrapper>
       <h1>Mental Health Resources</h1>
@@ -95,51 +91,46 @@ function MentalHealthResources() {
         </ul>
       </div>
 
-      {accessLevel !== 'basic' && (
-        <div className="typo">
-          <div className="icon-wrapper">
-            <FaSmile />
-          </div>
-          <h2>Positive Affirmations</h2>
-          <Illustration src="images/positive affirmations.jpg" alt="Positive Affirmations" />
-          <p>
-            Boost your mood and build a positive mindset with our collection of affirmations. These daily reminders can help you stay motivated and maintain a healthy perspective on life.
-          </p>
-          <ul>
-            <li><strong>Daily Affirmations:</strong> Start your day with positive statements that affirm your abilities and potential. For example, "I am capable and strong," "I am worthy of love and respect," "I can achieve my goals."</li>
-            <li><strong>Stress Relief:</strong> Use affirmations to remind yourself of your strengths and capacity to handle challenges. For example, "I am calm and in control," "I can handle whatever comes my way."</li>
-            <li><strong>Mental Clarity:</strong> Focus on affirmations that encourage a clear and calm mind, helping you tackle tasks effectively. For example, "I am focused and present," "My mind is clear and sharp."</li>
-            <li><strong>Building Self-Esteem:</strong> Affirmations that help you recognize your worth and build confidence in your abilities. For example, "I believe in myself," "I am confident and capable."</li>
-            <li><strong>Overcoming Negative Thoughts:</strong> Techniques to replace negative self-talk with positive affirmations. For example, "I let go of negative thoughts," "I choose positivity and joy."</li>
-          </ul>
-          <p>
-            Incorporating positive affirmations into your daily routine can significantly boost your self-esteem, improve your outlook on life, and help you manage stress more effectively.
-          </p>
+      <div className="typo">
+        <div className="icon-wrapper">
+          <FaSmile />
         </div>
-      )}
+        <h2>Positive Affirmations</h2>
+        <Illustration src="images/positive affirmations.jpg" alt="Positive Affirmations" />
+        <p>
+          Boost your mood and build a positive mindset with our collection of affirmations. These daily reminders can help you stay motivated and maintain a healthy perspective on life.
+        </p>
+        <ul>
+          <li><strong>Daily Affirmations:</strong> Start your day with positive statements that affirm your abilities and potential. For example, "I am capable and strong," "I am worthy of love and respect," "I can achieve my goals."</li>
+          <li><strong>Stress Relief:</strong> Use affirmations to remind yourself of your strengths and capacity to handle challenges. For example, "I am calm and in control," "I can handle whatever comes my way."</li>
+          <li><strong>Mental Clarity:</strong> Focus on affirmations that encourage a clear and calm mind, helping you tackle tasks effectively. For example, "I am focused and present," "My mind is clear and sharp."</li>
+          <li><strong>Building Self-Esteem:</strong> Affirmations that help you recognize your worth and build confidence in your abilities. For example, "I believe in myself," "I am confident and capable."</li>
+          <li><strong>Overcoming Negative Thoughts:</strong> Techniques to replace negative self-talk with positive affirmations. For example, "I let go of negative thoughts," "I choose positivity and joy."</li>
+        </ul>
+        <p>
+          Incorporating positive affirmations into your daily routine can significantly boost your self-esteem, improve your outlook on life, and help you manage stress more effectively.
+        </p>
+      </div>
       
-      {accessLevel === 'family' && (
-        <div className="typo">
-          <div className="icon-wrapper">
-            <FaHeart />
-          </div>
-          <h2>Holistic Wellness</h2>
-          <Illustration src="images/meditation.jpg" alt="Holistic Wellness" />
-          <p>
-            Explore our holistic approach to wellness, integrating physical, mental, and emotional health to help you achieve overall well-being.
-          </p>
-          <ul>
-            <li><strong>Physical Health:</strong> Tips and resources for maintaining physical fitness, including exercise routines and healthy eating habits. Regular physical activity can improve your mood, reduce stress, and boost overall health.</li>
-            <li><strong>Emotional Health:</strong> Techniques for managing emotions, building healthy relationships, and fostering emotional resilience. Being emotionally healthy can help you cope with life's challenges and maintain positive relationships.</li>
-            <li><strong>Spiritual Health:</strong> Practices to nurture your spirit, such as meditation, yoga, and connecting with nature. Focusing on spiritual health can provide a sense of purpose and inner peace.</li>
-            <li><strong>Social Health:</strong> Strategies for building and maintaining supportive social networks and community connections. Strong social connections can provide support, reduce feelings of loneliness, and improve your overall well-being.</li>
-          </ul>
-          <p>
-            Adopting a holistic approach to wellness can help you achieve a balanced and fulfilling life, where physical, mental, and emotional health are harmoniously integrated.
-          </p>
+      <div className="typo">
+        <div className="icon-wrapper">
+          <FaHeart />
         </div>
-      )}
-
+        <h2>Holistic Wellness</h2>
+        <Illustration src="images/meditation.jpg" alt="Holistic Wellness" />
+        <p>
+          Explore our holistic approach to wellness, integrating physical, mental, and emotional health to help you achieve overall well-being.
+        </p>
+        <ul>
+          <li><strong>Physical Health:</strong> Tips and resources for maintaining physical fitness, including exercise routines and healthy eating habits. Regular physical activity can improve your mood, reduce stress, and boost overall health.</li>
+          <li><strong>Emotional Health:</strong> Techniques for managing emotions, building healthy relationships, and fostering emotional resilience. Being emotionally healthy can help you cope with life's challenges and maintain positive relationships.</li>
+          <li><strong>Spiritual Health:</strong> Practices to nurture your spirit, such as meditation, yoga, and connecting with nature. Focusing on spiritual health can provide a sense of purpose and inner peace.</li>
+          <li><strong>Social Health:</strong> Strategies for building and maintaining supportive social networks and community connections. Strong social connections can provide support, reduce feelings of loneliness, and improve your overall well-being.</li>
+        </ul>
+        <p>
+          Adopting a holistic approach to wellness can help you achieve a balanced and fulfilling life, where physical, mental, and emotional health are harmoniously integrated.
+        </p>
+      </div>
     </MentalHealthResourcesWrapper>
   );
 }

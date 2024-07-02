@@ -1,28 +1,71 @@
 /* Header.css */
 
-/* Header.css */
-
+/* Global styles for header */
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
   background-color: #1a237e;
-  color: #ffffff;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
 }
 
-.header .logo {
+.logo {
   font-size: 1.5em;
   font-weight: bold;
+  margin: 0;
+  text-align: center;
 }
 
-.header .nav .nav-link {
-  color: #ffffff;
-  margin-right: 15px;
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.header .nav .nav-link:hover {
-  text-decoration: underline;
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-  
+.nav-link:hover {
+  background-color: #fbc02d;
+  color: #1a237e;
+  transform: translateY(-3px);
+  border-radius: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    gap: 5px;
+  }
+
+  .nav-link {
+    padding: 8px 15px;
+  }
+}
+.hg{
+  color: white;
+}

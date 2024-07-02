@@ -6,20 +6,15 @@ body {
   padding: 0;
 }
 
-.typo {
-  width: 100%;
-  max-width: 1200px; /* Adjusted max-width for better responsiveness */
-  border: 1px solid #666;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 20px auto;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+.type2 {
+  position: relative;
+  top: 80px;
 }
 
-.typo:hover {
-  transform: translateY(-5px);
+.ht {
+  position: relative;
+  left: 250px;
+  width: 900px;
 }
 
 .typo h2 {
@@ -31,7 +26,7 @@ body {
 
 ul {
   list-style-type: disc;
-  padding-left: 20px; /* Adjusted padding for better alignment */
+  padding-left: 20px;
 }
 
 ul li {
@@ -46,6 +41,8 @@ button.signup-button {
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  position: relative;
+  left: 300px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -64,120 +61,79 @@ button.signup-button:hover {
   }
 }
 
+.stat {
+  position: relative;
+  top: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hi,
+.hey {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.hey,
+.typo2 {
+  width: 90%;
+  color: white;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
-  .HomeWrapper {
-    width: 95%;
-    padding: 30px;
+  .ht {
+    left: 50px;
+    width: 100%;
+    max-width: 900px;
   }
 
-  .typo {
-    max-width: 1000px;
+  button.signup-button {
+    left: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ht {
+    left: 30px;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  button.signup-button {
+    left: 30px;
   }
 
   .typo h2 {
     font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .ht {
+    left: 10px;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  button.signup-button {
+    left: 10px;
+    width: 90%;
     text-align: center;
-    left: 0;
+  }
+
+  .typo h2 {
+    font-size: 1.8em;
   }
 
   ul {
     padding-left: 15px;
   }
-}
 
-@media (max-width: 900px) {
-  .HomeWrapper {
-    padding: 20px;
-  }
-
-  .typo {
-    max-width: 800px;
-  }
-
-  .typo h2 {
-    font-size: 1.8em;
-    text-align: center;
-    left: 0;
-  }
-
-  .section p,
-  .section ul,
-  .typo p,
-  .typo ul {
-    font-size: 1.1em;
-  }
-
-  ul {
-    padding-left: 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  .HomeWrapper {
-    padding: 15px;
-  }
-
-  .typo {
-    max-width: 90%;
-  }
-
-  .typo h2 {
-    font-size: 1.6em;
-    text-align: center;
-    left: 0;
-  }
-
-  .section p,
-  .section ul,
-  .typo p,
-  .typo ul {
-    font-size: 1em;
-  }
-
-  button.signup-button {
-    padding: 8px 16px;
-    font-size: 1em;
-    width: auto;
-  }
-
-  ul {
-    padding-left: 5px;
-  }
-}
-
-/* Positioning classes */
-.hi,
-.stat,
-.type,
-.type2,
-.type3,
-.typ2,
-.hey,
-.typo2 {
-  position: relative;
-  top: 80px;
-  margin: 0 auto; /* Center align elements */
-  text-align: center;
-}
-
-.hey,
-.typo2 {
-  width: 90%; /* Adjust width for better responsiveness */
-  color: white;
-}
-
-@media (max-width: 600px) {
   .hi,
-  .stat,
-  .type,
-  .type2,
-  .type3,
-  .typ2,
-  .hey,
-  .typo2 {
-    width: 100%; /* Full width on narrow screens */
-    padding: 10px;
-    left: 0;
+  .hey {
+    left: 10px;
+    width: 90%;
   }
 }

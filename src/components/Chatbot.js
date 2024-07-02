@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { FaComments } from 'react-icons/fa';
 
@@ -82,13 +82,40 @@ const Message = styled.div`
   align-self: ${props => (props.isUser ? 'flex-end' : 'flex-start')};
 `;
 
-const Chatbot = ({ userSubscription }) => {
+const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setMessages([]);
+    }, 2 * 60 * 60 * 1000); // 2 hours
+  };
+
+  useEffect(() => {
+    resetTimeout();
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [messages]);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
+  };
+
+  const generalResponses = {
+    "headache": "I'm sorry to hear that you have a headache. It's important to rest, stay hydrated, and avoid any triggers. If the headache persists, please consult a healthcare professional.",
+    "body weakness": "Feeling body weakness can be due to various reasons. Make sure to rest, eat a balanced diet, and stay hydrated. If it continues, please see a healthcare professional.",
+    "sleepy": "Feeling sleepy often could be a sign of lack of sleep or other underlying conditions. Ensure you are getting enough rest and if it persists, consult a healthcare professional.",
+    "moody": "Experiencing mood swings can be challenging. Make sure to take care of your mental health and consider speaking to a mental health professional if needed.",
+    "body pain": "Body pain can have many causes. Rest, proper nutrition, and staying hydrated can help. If the pain is severe or persists, please see a healthcare professional."
   };
 
   const diseaseResponses = {
@@ -139,29 +166,42 @@ const Chatbot = ({ userSubscription }) => {
     }
   };
 
-  const checkAccess = () => {
-    return userSubscription === 'premium' || userSubscription === 'family';
-  };
-
   const handleSend = () => {
     if (inputValue.trim()) {
       const userMessage = { text: inputValue, isUser: true };
       setMessages([...messages, userMessage]);
       setInputValue('');
-
-      if (!checkAccess()) {
-        const accessMessage = { text: 'Please subscribe to the Premium or Family plan to access chat support.', isUser: false };
-        setMessages(prevMessages => [...prevMessages, accessMessage]);
-        return;
-      }
+      resetTimeout(); // Reset timeout on user activity
 
       let response = 'I am sorry, I cannot respond to that right now. Please rephrase your question.';
 
-      for (const disease in diseaseResponses) {
-        if (inputValue.toLowerCase().includes(disease)) {
-          const { advice, medicines, exercises } = diseaseResponses[disease];
-          response = `${advice}\n\nMedicines: ${medicines}\n\nExercises: ${exercises}`;
-          break;
+      if (inputValue.toLowerCase() === 'hi') {
+        response = 'Welcome to HealthCare! How can I help you?';
+      } else if (inputValue.toLowerCase().includes('not feeling well') || 
+                 inputValue.toLowerCase().includes('feeling sad') || 
+                 inputValue.toLowerCase().includes('feeling depressed') || 
+                 inputValue.toLowerCase().includes('not okay') || 
+                 inputValue.toLowerCase().includes('am not well') || 
+                 inputValue.toLowerCase().includes('not well')) {
+        response = "I'm sorry to hear that you're not feeling well. If you need immediate help, i can help.";
+      } else {
+        let found = false;
+        for (const key in generalResponses) {
+          if (inputValue.toLowerCase().includes(key)) {
+            response = generalResponses[key];
+            found = true;
+            break;
+          }
+        }
+
+        if (!found) {
+          for (const disease in diseaseResponses) {
+            if (inputValue.toLowerCase().includes(disease)) {
+              const { advice, medicines, exercises } = diseaseResponses[disease];
+              response = `${advice}\n\nMedicines: ${medicines}\n\nExercises: ${exercises}`;
+              break;
+            }
+          }
         }
       }
 
