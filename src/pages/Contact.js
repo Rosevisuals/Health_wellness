@@ -37,9 +37,7 @@ function Contact() {
 
       <div className="contact-info">
         <h2>Our Contact Information</h2>
-        <p>Email: info@aihealthwellness.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 Wellness St, Health City, HC 12345</p>
+        <p>Email: healthafcare@gmail.com</p>
       </div>
 
       <div className="review-section">

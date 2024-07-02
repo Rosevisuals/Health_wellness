@@ -61,7 +61,7 @@ function Home() {
   return (
     <>
       <HeroSection>
-        <h1 className='hi'>Welcome to Health Care Platform</h1>
+        <h1 className='hi'>Welcome to HealthafCare Platform</h1>
         <p className='hey'>Discover a new way to achieve your health and wellness goals with our advanced AI-driven platform.</p>
         <HeroButton to="/dashboard" className='stat'>Get Started</HeroButton>
       </HeroSection>

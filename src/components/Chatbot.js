@@ -176,7 +176,7 @@ const Chatbot = () => {
       let response = 'I am sorry, I cannot respond to that right now. Please rephrase your question.';
 
       if (inputValue.toLowerCase() === 'hi') {
-        response = 'Welcome to HealthCare! How can I help you?';
+        response = 'Welcome to HealthafCare! How can I help you?';
       } else if (inputValue.toLowerCase().includes('not feeling well') || 
                  inputValue.toLowerCase().includes('feeling sad') || 
                  inputValue.toLowerCase().includes('feeling depressed') || 

@@ -6,7 +6,7 @@ function About() {
     <div className="AboutWrapper">
       <h1>About Us</h1>
       <div className="content">
-        <p>Welcome to AI Health & Wellness, your trusted partner in achieving your health and wellness goals. Our platform leverages advanced AI technology to provide personalized fitness plans, nutrition advice, and mental health resources tailored to your unique needs.</p>
+        <p>Welcome to HealthafCare, your trusted partner in achieving your health and wellness goals. Our platform leverages advanced AI technology to provide personalized fitness plans, nutrition advice, and mental health resources tailored to your unique needs.</p>
         
         <h2>Eco-Conscious Wellness Practices</h2>
         <p>We emphasize eco-conscious wellness practices by offering sustainable products and promoting environmentally friendly lifestyle choices. Our platform highlights the environmental impact of wellness practices and encourages users to adopt sustainable habits. By choosing eco-friendly products and reducing waste, we can all contribute to a healthier planet while improving our own well-being.</p>
